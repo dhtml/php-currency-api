@@ -1,7 +1,8 @@
 {
   "name": "anthony/agpaytech",
   "require": {
-    "php": "^7.4"
+    "php": "^7.4",
+    "sergeytsalkov/meekrodb": "^2.4"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5"

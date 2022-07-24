@@ -48,6 +48,12 @@ class Console
         self::$consoleCommands["$signature"] = $object;
     }
 
+    /**
+     * Execute console command
+     * @param string $signature
+     * @param array $parameters
+     * @throws Exception
+     */
     private static function executeCommand(string $signature, array $parameters)
     {
         if (isset(self::$consoleCommands[$signature])) {

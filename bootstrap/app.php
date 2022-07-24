@@ -7,5 +7,11 @@ const COMMANDS_PATH = APP_PATH . "Console" . DS . "Commands" . DS;
 require __DIR__ . '/../environment.php';
 require __DIR__ . '/BaseFuncs.php';
 
+require __DIR__ . '/database.php';
 require __DIR__ . '/console.php';
-Console::initialize($argc, $argv);
+
+Database::initialize();
+
+if(isset($argc)) {
+    Console::initialize($argc, $argv);
+}
