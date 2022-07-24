@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\Model;
+
 /**
  * Search for namespaces match
  * @param string $namespace
@@ -25,4 +27,20 @@ function console_log($message) {
     $STDERR = fopen("php://stderr", "w");
     fwrite($STDERR, $message."\n");
     fclose($STDERR);
+}
+
+/**
+ * @param string $modelName
+ * @return Model
+ * @throws Exception
+ */
+function getModelByName(string $modelName)
+{
+    $modelNameSpace = "\\App\\Models\\".$modelName;
+    $model = new $modelNameSpace();
+    if($model instanceof Model) {
+        return $model;
+    } else {
+        throw new \Exception("No model found called $modelNameSpace");
+    }
 }

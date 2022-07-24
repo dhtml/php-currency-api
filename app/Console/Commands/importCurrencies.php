@@ -33,6 +33,6 @@ class importCurrencies extends Command
     public function handle()
     {
         $importCsvService = new ImportCSVService();
-        $importCsvService->import("currencies");
+        $importCsvService->import("currency");
     }
 }

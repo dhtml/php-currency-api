@@ -32,6 +32,6 @@ class importCountries extends Command
     public function handle()
     {
         $importCsvService = new ImportCSVService();
-        $importCsvService->import("countries");
+        $importCsvService->import("country");
     }
 }
