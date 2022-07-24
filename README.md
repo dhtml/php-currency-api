@@ -6,6 +6,12 @@
 3. Install the database schema
 php magi schema:install
 
+4. Import Countries schema
+php magi import:countries
+
+5. Import Currencies schema
+php magi import:currencies
+
 
 Configure the environment database
 

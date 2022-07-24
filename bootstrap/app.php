@@ -1,4 +1,8 @@
 <?php
+if (!ini_get("auto_detect_line_endings")) {
+    ini_set("auto_detect_line_endings", '1');
+}
+
 const DS = DIRECTORY_SEPARATOR;
 define("BASE_PATH", dirname(__DIR__ . "../") . DS);
 const APP_PATH = BASE_PATH . "app" . DS;

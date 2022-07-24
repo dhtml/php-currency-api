@@ -2,6 +2,7 @@
   "name": "anthony/agpaytech",
   "require": {
     "php": "^7.4",
+    "league/csv": "^9.8",
     "sergeytsalkov/meekrodb": "^2.4"
   },
   "require-dev": {
