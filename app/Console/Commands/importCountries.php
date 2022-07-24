@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Core\Command;
+use App\Services\importCSVService;
 
 class importCountries extends Command
 {
@@ -30,7 +31,7 @@ class importCountries extends Command
      */
     public function handle()
     {
-
-        echo "import Countries";
+        $importCsvService = new ImportCSVService();
+        $importCsvService->import("countries");
     }
 }

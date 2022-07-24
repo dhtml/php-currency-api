@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Core\Command;
-use DB;
+use App\Services\SchemaService;
 
 class schemaSetup extends Command
 {
@@ -33,14 +33,8 @@ class schemaSetup extends Command
     public function handle()
     {
         $this->log("Installing database schema");
-        try {
-        foreach (glob(SCHEMA_PATH . "*.sql") as $filename) {
-            $this->log("Setting up " . pathinfo($filename,PATHINFO_BASENAME));
-            DB::query(file_get_contents($filename));
-        }
-            $this->log("Database schema setup was successful");
-        } catch (MeekroDBException $e) {
-            exit($e->getMessage());
-        }
+        $schemaService = new SchemaService();
+        $response = $schemaService->installPath(SCHEMA_PATH . "*.sql");
+        echo $response['message'];
     }
 }

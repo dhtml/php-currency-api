@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Core\Command;
+use App\Services\importCSVService;
 
 class importCurrencies extends Command
 {
@@ -31,6 +32,7 @@ class importCurrencies extends Command
      */
     public function handle()
     {
-        echo "import Currencies";
+        $importCsvService = new ImportCSVService();
+        $importCsvService->import("currencies");
     }
 }
