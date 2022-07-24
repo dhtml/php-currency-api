@@ -17,4 +17,12 @@ class Command
     {
         return $this->signature ?? false;
     }
+
+    /**
+     * Log message to console
+     * @param $message
+     */
+    public function log($message) {
+        console_log($message);
+    }
 }

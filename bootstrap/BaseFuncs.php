@@ -16,3 +16,13 @@ function get_current_namespaces($namespace = "/")
     }
     return $result;
 }
+
+/**
+ * Log message to CLI
+ * @param $message
+ */
+function console_log($message) {
+    $STDERR = fopen("php://stderr", "w");
+    fwrite($STDERR, $message."\n");
+    fclose($STDERR);
+}

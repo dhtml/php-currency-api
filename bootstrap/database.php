@@ -13,8 +13,7 @@ class Database {
         try {
             $result = DB::query("SET NAMES UTF8");
         } catch (MeekroDBException $e) {
-            echo $e->getMessage();
-            exit();
+            exit($e->getMessage());
         }
     }
 
