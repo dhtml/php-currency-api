@@ -44,3 +44,8 @@ This was tested with PHPUnit 9.5.21 on OSX. Please ensure you have phpunit 9.5 s
 13. Run test with any of the following commands
    $ php magi test 
    $ composer test
+
+
+Additions:
+- You can find the screenshots in the screenshot folder
+- You can find the test database as sample.sql in the root folder
