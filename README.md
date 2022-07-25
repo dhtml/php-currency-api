@@ -1,7 +1,3 @@
-./vendor/bin/phpunit --verbose tests/UserTest.php
-
-phpunit --testsuite Unit  
-
 This was tested in valet setup, but with minimal configuration should be able to work in normal php environments.
 
 After cloning the application to your PC. Ensure you are running php 7.4 and above.
