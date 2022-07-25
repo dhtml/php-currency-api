@@ -14,7 +14,7 @@ class ModelSearchService
         $total = $model->findTotalMatch($term);
 
         //get limit per page
-        $limit = $filter['limit'] ?? DEFAULT_PAGER_LIMIT;
+        $limit = isset($filter['limit']) && $filter['limit']>0 ? $filter['limit'] : DEFAULT_PAGER_LIMIT;
 
         //total pages
         $totalPages = ceil($total / $limit);
@@ -24,7 +24,7 @@ class ModelSearchService
 
         //get last page when page filter is greater than total pages
         $page = min($page, $totalPages);
-        $offset = ($page - 1) * $limit;
+        $offset = (int) ($page - 1) * $limit;
         if ($offset < 0) $offset = 0;
 
         $data = $model->searchRecords($term, $offset, $limit);
