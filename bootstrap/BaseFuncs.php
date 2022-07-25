@@ -30,6 +30,15 @@ function console_log($message) {
 }
 
 /**
+ * @param $response
+ */
+function render_json($response) {
+    header("Content-Type: application/json; charset=utf-8");
+    $response = json_encode($response,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE);
+    echo $response;
+}
+
+/**
  * @param string $modelName
  * @return Model
  * @throws Exception

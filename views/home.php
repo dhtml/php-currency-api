@@ -22,8 +22,8 @@
                         <span id="search_concept">Filter by</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a id="country" href="#currencies?common_name">Country</a></li>
-                        <li><a id="currency" href="#currencies?common_name">Currency</a></li>
+                        <li><a id="country" href="#countries?term">Countries</a></li>
+                        <li><a id="currency" href="#currencies?term">Currencies</a></li>
                     </ul>
                 </div>
                 <input type="hidden" name="search_param" value="all" id="search_param">

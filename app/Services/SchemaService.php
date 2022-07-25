@@ -14,12 +14,12 @@ class SchemaService
      */
     public function installPath(string $path)
     {
-            foreach (glob($path) as $filename) {
-                if(!$this->installFile($filename)) {
-                    return ["message"=>"Database Schema Setup Failed", "success"=>false];
-                }
+        foreach (glob($path) as $filename) {
+            if (!$this->installFile($filename)) {
+                return ["message" => "Database Schema Setup Failed", "success" => false];
             }
-            return ["message"=>"Database schema setup was successful","success"=>true];
+        }
+        return ["message" => "Database schema setup was successful", "success" => true];
     }
 
     /**

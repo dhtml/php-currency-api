@@ -4,9 +4,6 @@ namespace App\Core;
 
 class Command
 {
-    public function __construct()
-    {
-    }
 
     /**
      * Get Signature If There Is One
@@ -22,7 +19,8 @@ class Command
      * Log message to console
      * @param $message
      */
-    public function log($message) {
+    public function log($message)
+    {
         console_log($message);
     }
 }

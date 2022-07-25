@@ -10,3 +10,7 @@ const DB_USERNAME = 'admin';
 
 /*Database password*/
 const DB_PASSWORD = 'pass';
+
+
+/*pagination limit*/
+const DEFAULT_PAGER_LIMIT = 10;
