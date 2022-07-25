@@ -14,16 +14,16 @@ class SearchTest extends TestCase
      */
     public function testCurrencySearchFilter()
     {
-        $response = ModelSearchService::find(Currency::getInstance(), ['term'=>'british']);
+        $response = ModelSearchService::find(Currency::getInstance(), ['term' => 'british']);
         $this->assertIsArray($response);
         $this->assertNotEmpty($response['data']);
 
-        if(isset($response['current_page'])) {
-            $this->assertSame($response['current_page'],1);
+        if (isset($response['current_page'])) {
+            $this->assertSame($response['current_page'], 1);
             $this->assertCount(4, $response);
         }
 
-        if(isset($response['data'][0])) {
+        if (isset($response['data'][0])) {
             $this->assertContains('1', array_values($response['data'][0]));
         }
     }
@@ -33,7 +33,7 @@ class SearchTest extends TestCase
      */
     public function testCurrencySearchFilterFailure()
     {
-        $response = ModelSearchService::find(Currency::getInstance(), ['term'=>'british government']);
+        $response = ModelSearchService::find(Currency::getInstance(), ['term' => 'british government']);
         $this->assertEmpty($response['data']);
     }
 
@@ -43,16 +43,16 @@ class SearchTest extends TestCase
      */
     public function testCountrySearchFilter()
     {
-        $response = ModelSearchService::find(Country::getInstance(), ['term'=>'british']);
+        $response = ModelSearchService::find(Country::getInstance(), ['term' => 'british']);
         $this->assertIsArray($response);
         $this->assertNotEmpty($response['data']);
 
-        if(isset($response['current_page'])) {
-            $this->assertSame($response['current_page'],1);
+        if (isset($response['current_page'])) {
+            $this->assertSame($response['current_page'], 1);
             $this->assertCount(4, $response);
         }
 
-        if(isset($response['data'][0])) {
+        if (isset($response['data'][0])) {
             $this->assertContains('33', array_values($response['data'][0]));
         }
     }
@@ -62,7 +62,7 @@ class SearchTest extends TestCase
      */
     public function testCountrySearchFilterFailure()
     {
-        $response = ModelSearchService::find(Country::getInstance(), ['term'=>'british government']);
+        $response = ModelSearchService::find(Country::getInstance(), ['term' => 'british government']);
         $this->assertEmpty($response['data']);
     }
 }

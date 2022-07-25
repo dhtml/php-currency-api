@@ -18,7 +18,7 @@ class APITest extends TestCase
         $this->assertObjectHasAttribute('total_pages', $response);
         $this->assertObjectHasAttribute('per_page', $response);
         $this->assertObjectHasAttribute('data', $response);
-        if(isset($response->versionCode)) {
+        if (isset($response->versionCode)) {
             $this->assertGreaterThanOrEqual(1, $response->total_pages);
         }
     }
@@ -34,7 +34,7 @@ class APITest extends TestCase
         $this->assertObjectHasAttribute('total_pages', $response);
         $this->assertObjectHasAttribute('per_page', $response);
         $this->assertObjectHasAttribute('data', $response);
-        if(isset($response->versionCode)) {
+        if (isset($response->versionCode)) {
             $this->assertGreaterThanOrEqual(1, $response->total_pages);
         }
     }

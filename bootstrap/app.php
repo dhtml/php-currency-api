@@ -17,15 +17,15 @@ const VIEW_PATH = BASE_PATH . "views" . DS;
 require __DIR__ . '/../environment.php';
 require __DIR__ . '/BaseFuncs.php';
 
-define ("CURRENT_URL", getCurrentUrl());
-define ("BASE_URL", getCurrentUrl(false));
+define("CURRENT_URL", getCurrentUrl());
+define("BASE_URL", getCurrentUrl(false));
 require __DIR__ . '/database.php';
 require __DIR__ . '/console.php';
 require __DIR__ . '/browser.php';
 
 Database::initialize();
 
-if(isset($argc)) {
+if (isset($argc)) {
     //start console app
     Console::initialize($argc, $argv);
 } else {

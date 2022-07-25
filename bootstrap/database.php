@@ -1,7 +1,7 @@
 <?php
-use DB;
 
-class Database {
+class Database
+{
 
     public static function initialize()
     {
