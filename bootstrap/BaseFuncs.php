@@ -73,7 +73,7 @@ function view(string $viewName) {
  * @return string
  */
 function url(string $subpath = "") {
-    return BASE_URL . ltrim($subpath,'/');
+    return BASE_URL . '/'. ltrim($subpath,'/');
 }
 
 /**
@@ -90,6 +90,8 @@ function getCurrentUrl($full = true) {
         );
         $parse['port'] = $_SERVER["SERVER_PORT"]; // Setup protocol for sure (80 is default)
         return rtrim(http_build_url('', $parse),'/') . '/';
+    } else {
+        return BROWSER_URL;
     }
 }
 

@@ -53,7 +53,7 @@ class Model
     public function findTotalMatch(string $term)
     {
         $result = $this->searchForTerm($term, 'count(*) matches');
-        return $result[0]['matches'] ?? 0;
+        return (int) $result[0]['matches'] ?? 0;
     }
 
     /**

@@ -5,6 +5,10 @@ namespace App\Core;
 class Command
 {
 
+    public function __construct()
+    {
+    }
+
     /**
      * Get Signature If There Is One
      *

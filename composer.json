@@ -14,10 +14,20 @@
       "App\\": "app/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
   "authors": [
     {
       "name": "Anthony Ogundipe",
       "email": "diltony@gmail.com"
     }
-  ]
+  ],
+  "scripts": {
+    "test": [
+      "php magi test"
+    ]
+  }
 }

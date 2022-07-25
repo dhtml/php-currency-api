@@ -19,7 +19,6 @@ require __DIR__ . '/BaseFuncs.php';
 
 define ("CURRENT_URL", getCurrentUrl());
 define ("BASE_URL", getCurrentUrl(false));
-
 require __DIR__ . '/database.php';
 require __DIR__ . '/console.php';
 require __DIR__ . '/browser.php';

@@ -1,4 +1,7 @@
 <?php
+/*Installed URL used for feature test*/
+const BROWSER_URL = 'http://agpay.test';
+
 /*Database host name*/
 const DB_HOSTNAME = '127.0.0.1';
 

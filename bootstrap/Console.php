@@ -59,7 +59,8 @@ class Console
         if (isset(self::$consoleCommands[$signature])) {
             self::$consoleCommands[$signature]->handle($parameters);
         } else {
-            throw new Exception("Command not found : $signature");
+            console_log("Command not found : $signature");
+            exit();
         }
     }
 
